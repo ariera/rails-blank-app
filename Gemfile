@@ -1,0 +1,65 @@
+source 'https://rubygems.org'
+
+
+gem 'rails', '4.1.5'
+gem 'pg'
+gem 'sass-rails', '~> 4.0.3'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'bourbon'
+gem 'jbuilder', '~> 2.0'
+gem 'activerecord-session_store'
+gem "haml"
+gem "haml-rails"
+gem 'haml_coffee_assets', git: "https://github.com/netzpirat/haml_coffee_assets"
+gem 'execjs'
+gem 'css_splitter'
+
+gem 'cancancan'
+gem 'resque', :require => 'resque/server'
+gem 'resque-scheduler'
+gem "stamp", "~> 0.4.0"
+gem 'stamp-i18n'
+gem 'rails-i18n'
+gem 'kaminari'
+
+group :production, :development do
+  gem 'redis'
+  gem "redis-store", :require => "redis-store"
+  gem 'redis-rails'
+end
+
+group :test, :development do
+  gem 'pry'
+  gem 'pry-doc'
+  gem 'pry-rails'
+  gem "timecop"
+
+  gem 'factory_girl_rails'
+  gem "rspec-rails", '~> 2.99'
+end
+
+group :test do
+  gem 'launchy'
+  gem 'database_cleaner'
+  gem "fuubar"
+  gem "capybara"
+  gem 'poltergeist'
+  gem 'cucumber-rails', :require => false
+  gem "headless"
+  # Pretty printed test output
+  gem 'turn', :require => false
+end
+
+group :development do
+  gem 'spring'
+  gem 'quiet_assets'
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "spring-commands-rspec"
+  gem "spring-commands-cucumber"
+end
+
+group :doc do
+  gem 'sdoc', '~> 0.4.0'
+end
