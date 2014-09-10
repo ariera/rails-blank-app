@@ -47,8 +47,6 @@ group :test do
   gem 'poltergeist'
   gem 'cucumber-rails', :require => false
   gem "headless"
-  # Pretty printed test output
-  gem 'turn', :require => false
 end
 
 group :development do
