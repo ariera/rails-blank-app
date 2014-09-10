@@ -15,6 +15,7 @@ gem 'haml_coffee_assets', git: "https://github.com/netzpirat/haml_coffee_assets"
 gem 'execjs'
 gem 'css_splitter'
 
+gem 'devise', '~> 3.3.0'
 gem 'cancancan'
 gem 'resque', :require => 'resque/server'
 gem 'resque-scheduler'
