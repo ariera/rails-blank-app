@@ -8,3 +8,4 @@ An already working application with the latest libraries that we love already in
 * open new branch for `devise`
 * add I18n support
 * finish the TODO
+* explain database, secrets examples
