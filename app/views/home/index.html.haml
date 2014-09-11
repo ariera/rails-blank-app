@@ -5,7 +5,10 @@
     %h1= t('hello')
     %p This is a template for a simple Rails app. It includes a set of tools that we tend to use in our projects. Use it as a starting point to create something more unique.
     %p
-      %a.btn.btn-primary.btn-lg{:role => "button"} Learn more »
+      = link_to 'https://github.com/ariera/rails-blank-app', class:'btn btn-primary btn-lg' do
+        %i.fa.fa-github
+        Fork it on Github
+
     #x-bootstrap-example-from-backend-anchor
 .container
   .row
