@@ -14,6 +14,7 @@ gem "haml-rails"
 gem 'haml_coffee_assets', git: "https://github.com/netzpirat/haml_coffee_assets"
 gem 'execjs'
 gem 'css_splitter'
+gem "browser"
 
 gem 'cancancan'
 gem 'resque', :require => 'resque/server'

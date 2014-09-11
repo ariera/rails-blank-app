@@ -52,6 +52,7 @@ GEM
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
+    browser (0.6.0)
     builder (3.2.2)
     cancancan (1.9.2)
     capybara (2.4.1)
@@ -284,6 +285,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bourbon
+  browser
   cancancan
   capybara
   coffee-rails (~> 4.0.0)
