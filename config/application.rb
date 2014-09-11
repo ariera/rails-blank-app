@@ -33,6 +33,9 @@ module App
       g.helper false
     end
 
+    config.assets.precompile += %w( legacy/ie9.css )
+    config.assets.precompile += %w( application_split2.css )
+
     Dir.glob("#{Rails.root}/vendor/assets/**/").each do |path|
       config.assets.paths << path
     end
