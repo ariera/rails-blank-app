@@ -2,7 +2,7 @@
   %div{ data: { bootstrap_example_from_backend: @bootstrap_example_from_backend.to_json } }
 .jumbotron
   .container
-    %h1 Hello, world!
+    %h1= t('hello')
     %p This is a template for a simple Rails app. It includes a set of tools that we tend to use in our projects. Use it as a starting point to create something more unique.
     %p
       %a.btn.btn-primary.btn-lg{:role => "button"} Learn more »
@@ -12,11 +12,26 @@
     .col-md-4
       %h2
         %i.fa.fa-rebel
-        Heading
+        Locales
       %p
-        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        There are #{I18n.available_locales.length} different locales available
+        %ol
+          - I18n.available_locales.each do |locale|
+            %li
+              = link_to locale, url_for(request.query_parameters.merge("#{LocaleAware::LOCALE_PARAM}" => locale)), class:'btn btn-xs btn-default'
+        with support for
+        %ol
+          %li params
+          %li user preferences
+          %li session
+          %li and browser preferences
+        Check
+        %code LocaleAware
+        concern to know more. It has been tested with the help of
+        = link_to url_for(controller:"dev", action:"locales") do
+          %code DevController
       %p
-        %a.btn.btn-default{:href => "#", :role => "button"} View details »
+        %a.btn.btn-default{:href => url_for(controller:"dev", action:"locales"), :role => "button"} View details »
     .col-md-4
       %h2
         %i.fa.fa-pied-piper-alt

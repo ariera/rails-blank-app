@@ -22,6 +22,7 @@ gem "stamp", "~> 0.4.0"
 gem 'stamp-i18n'
 gem 'rails-i18n'
 gem 'kaminari'
+gem 'http_accept_language'
 
 group :production, :development do
   gem 'redis'
