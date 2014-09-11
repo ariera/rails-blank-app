@@ -10,6 +10,10 @@ class DevController < ApplicationController
 
     def locales
     end
+
+    def access_denied
+      raise CanCan::AccessDenied
+    end
   end
 
   private

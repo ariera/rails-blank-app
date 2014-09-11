@@ -19,8 +19,7 @@ An already working application with the latest libraries, and our own convention
 * IE9 conditional stylesheet + css splitter to avoid the > 4096 selectors issue for that browser
 * seo_vars, look how they are used in `DevController`
 * return_here_url helper
-
->>>>>>> FETCH_HEAD
+* basic cancacan config
 
 ## TODO
 
@@ -30,7 +29,7 @@ An already working application with the latest libraries, and our own convention
 * document how to install poltergeist
 * explain database, secrets examples
 * helper for flash messages
-* basic cancacan config
+* helper to display an object errors
 * rescue CanCan::AccessDenied
 * follow_return_to_or helper
 * authenticate_user_and_return_to helper
