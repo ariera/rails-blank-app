@@ -25,3 +25,4 @@ An already working application with the latest libraries that we love already in
 * finish the TODO
 * add default url config and email smtp settings
 * document how to install poltergeist
+* explain database, secrets examples
