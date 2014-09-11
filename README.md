@@ -20,20 +20,19 @@ An already working application with the latest libraries, and our own convention
 * seo_vars, look how they are used in `DevController`
 * return_here_url helper
 * basic cancacan config
+* rescue CanCan::AccessDenied
+* follow_return_to_or helper
+* authenticate_user_and_return_to helper
+* render_404 y ActiveRecord::RecordNotFound helper
+* helper to display an object errors `errors_list`
+* helper for flash messages
 
 ## TODO
 
 * document the application the awesome things this App does
 * list the libraries supported
-* open new branch for `devise`
 * document how to install poltergeist
 * explain database, secrets examples
-* helper for flash messages
-* helper to display an object errors
-* rescue CanCan::AccessDenied
-* follow_return_to_or helper
-* authenticate_user_and_return_to helper
-* render_404 y ActiveRecord::RecordNotFound helper
 * consider adding high_voltage for static pages management
 
 ## SETING UP THE APP

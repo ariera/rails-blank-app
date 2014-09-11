@@ -35,10 +35,19 @@
     .col-md-4
       %h2
         %i.fa.fa-pied-piper-alt
-        Heading
-      %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      %p
-        %a.btn.btn-default{:href => "#", :role => "button"} View details »
+        Some small features
+      %ul
+        %li
+          = link_to url_for(controller:"dev", action:"access_denied"), class:'btn btn-xs btn-default' do
+            Try it
+          %code CanCan::AccessDenied
+          errors redirect a user to the frontpage
+        %li
+          = link_to url_for(controller:"dev", action:"flash_messages"), class:'btn btn-xs btn-default' do
+            Try it
+          %code flash[:messages]
+          are autmatically handeled by the layout
+
     .col-md-4
       %h2
         %i.fa.fa-paw

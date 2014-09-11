@@ -1,4 +1,4 @@
-module ErrorMessagesHelper
+module AppNotificationsHelper
 
   def errors_list(model)
     if model.errors.any?
@@ -12,4 +12,16 @@ module ErrorMessagesHelper
     str
   end
 
+  def flash_type_to_bootstrap_class(type)
+    case type.to_sym
+      when :alert
+        "alert-warning"
+      when :error
+        "alert-danger"
+      when :notice
+        "alert-success"
+      else
+        "alert-info"
+    end
+  end
 end

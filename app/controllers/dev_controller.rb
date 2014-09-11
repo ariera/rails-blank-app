@@ -14,6 +14,13 @@ class DevController < ApplicationController
     def access_denied
       raise CanCan::AccessDenied
     end
+
+    def flash_messages
+      flash[:alert]        = "I am a `alert` flash message"
+      flash[:error]        = "I am a `error` flash message"
+      flash[:notice]       = "I am a `notice` flash message"
+      flash[:non_existent] = "I am a `not_existant` flash message"
+    end
   end
 
   private
