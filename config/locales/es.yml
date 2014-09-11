@@ -6,3 +6,8 @@ es:
     locales_current_locale: "Locale Actual"
     locales_available_locales: "Locales Disponibles"
     locales_default_locale: "Locale por defecto"
+  shared:
+    errors:
+      one: '1 error ha impedido que se guardaran los cambios:'
+      other: '%{count} errores han impedido que se guardaran los cambios:'
+      file_too_big: "demasiado grande (máximo %{size} MB)"

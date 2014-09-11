@@ -15,6 +15,7 @@ An already working application with the latest libraries that we love already in
 * it has our `developer toolbar` that smoothes development :)
 * it uses `rspec` for unit and controller testing
 * it uses `cucumber` for integration and behaviour testing with support for poltergeist
+* it has an error messages helper
 
 ## TODO
 
