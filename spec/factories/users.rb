@@ -2,5 +2,6 @@
 
 FactoryGirl.define do
   factory :user do
+    locale 'en'
   end
 end
