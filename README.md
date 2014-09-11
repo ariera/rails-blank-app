@@ -27,7 +27,6 @@ An already working application with the latest libraries that we love already in
 * add default url config and email smtp settings
 * document how to install poltergeist
 * explain database, secrets examples
-* add `mailcatcher` in development
 * helper for flash messages
 * helper to display an object errors
 * basic cancacan config
@@ -38,3 +37,26 @@ An already working application with the latest libraries that we love already in
 * authenticate_user_and_return_to helper
 * render_404 y ActiveRecord::RecordNotFound helper
 * consider adding high_voltage for static pages management
+
+## SETING UP THE APP
+What you need to know about how to install and get this app running.
+
+### EMAILS
+We're using MailCatcher [http://mailcatcher.me/]
+
+1. Install it: `gem install mailcatcher`
+2. Launch it: `mailcatcher`
+  1. Alternatively if you are in *vagrant* `mailcatcher --http-ip=0.0.0.0`
+  2. Remember that you need the `1080` port opened in your *vagrant*
+3. Browse it: `http://localhost:1080/`
+4. Configure it:
+```
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+```
+
+_Remember that you need the `1080` port opened in your vagrant_
+
+We are not adding this file to the Gemfile as it not recommended by the MailCatcher mantainer
+"Please don't put mailcatcher into your Gemfile. It will conflict with your applications gems at some point."
+
