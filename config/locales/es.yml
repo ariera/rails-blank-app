@@ -1,6 +1,9 @@
 es:
   hello: ¡Hola Mundo!
+  seo_default_title: "Rails Blank App"
+  seo_default_desc: "Una aplicación funcional con las ultimas versiones de las librerías que más nos gustan y nuestras propias convenciones ya lista para usar"
   dev:
+    locales_seo_title: 'I18n & Locales en Rails Blank App'
     locales_intro: "Esta es una pagina necesaria para probar que las locales funcionan"
     locales_subintro_html: "La lógica está controlada por un concern de controlador llamado <kbd>LocaleAware</kbd>. Está siendo testeado utilizando esta página que <strong> NO </strong> aparecerá en producción. Por favor no la quites :)"
     locales_current_locale: "Locale Actual"
