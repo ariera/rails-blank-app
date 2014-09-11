@@ -14,6 +14,7 @@ gem "haml-rails"
 gem 'haml_coffee_assets', git: "https://github.com/netzpirat/haml_coffee_assets"
 gem 'execjs'
 gem 'css_splitter'
+gem "browser"
 
 gem 'devise', '~> 3.3.0'
 gem 'cancancan'
@@ -23,6 +24,7 @@ gem "stamp", "~> 0.4.0"
 gem 'stamp-i18n'
 gem 'rails-i18n'
 gem 'kaminari'
+gem 'http_accept_language'
 
 group :production, :development do
   gem 'redis'
@@ -48,8 +50,6 @@ group :test do
   gem 'poltergeist'
   gem 'cucumber-rails', :require => false
   gem "headless"
-  # Pretty printed test output
-  gem 'turn', :require => false
 end
 
 group :development do

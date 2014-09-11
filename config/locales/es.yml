@@ -1,0 +1,13 @@
+es:
+  hello: ¡Hola Mundo!
+  dev:
+    locales_intro: "Esta es una pagina necesaria para probar que las locales funcionan"
+    locales_subintro_html: "La lógica está controlada por un concern de controlador llamado <kbd>LocaleAware</kbd>. Está siendo testeado utilizando esta página que <strong> NO </strong> aparecerá en producción. Por favor no la quites :)"
+    locales_current_locale: "Locale Actual"
+    locales_available_locales: "Locales Disponibles"
+    locales_default_locale: "Locale por defecto"
+  shared:
+    errors:
+      one: '1 error ha impedido que se guardaran los cambios:'
+      other: '%{count} errores han impedido que se guardaran los cambios:'
+      file_too_big: "demasiado grande (máximo %{size} MB)"
