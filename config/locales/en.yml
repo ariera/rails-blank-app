@@ -32,3 +32,6 @@ en:
       one: '1 error prohibited this record from being saved:'
       other: '%{count} errors prohibited this record from being saved:'
       file_too_big: "too big (max %{size} MB)"
+  frontpage:
+    sign_up_btn: "Register"
+  log_out: "Logout"

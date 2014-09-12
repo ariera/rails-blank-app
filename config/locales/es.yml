@@ -11,3 +11,6 @@ es:
       one: '1 error ha impedido que se guardaran los cambios:'
       other: '%{count} errores han impedido que se guardaran los cambios:'
       file_too_big: "demasiado grande (máximo %{size} MB)"
+  frontpage:
+    sign_up_btn: "Registro"
+  log_out: "Cerrar Sesión"

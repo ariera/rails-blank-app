@@ -22,7 +22,7 @@ module ErrorMessagesHelper
       resource: resource.class.model_name.human.downcase)
 
     html = <<-HTML
-    <div class="alert alert-danger alert-block">
+    <div class="alert alert-danger alert-block errors">
       <button type="button" class="close" data-dismiss="alert">x</button>
       <h5>#{sentence}</h4>
       #{messages}

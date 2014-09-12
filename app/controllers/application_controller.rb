@@ -9,7 +9,4 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   before_filter :set_user_locale_if_unset
 
-  def current_user
-    User.first
-  end
 end

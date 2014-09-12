@@ -4,6 +4,8 @@ class DevController < ApplicationController
 
   if Rails.env.development? || Rails.env.test? || Rails.env.staging?
     def impersonate
+      user = User.find(params.require(:user_id))
+      sign_in(:user, user)
       redirect_to "/"
     end
 

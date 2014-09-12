@@ -11,8 +11,9 @@
         = f.label :password
         %br/
         = f.password_field :password, class: "form-control"
-      .form-group
-        = f.label :password_confirmation
-        = f.password_field :password_confirmation, class: "form-control"
+      -# uncomment to reenable password confirmation
+      -# .form-group
+      -#   = f.label :password_confirmation
+      -#   = f.password_field :password_confirmation, class: "form-control"
       = f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary"
 = render "devise/shared/links"
