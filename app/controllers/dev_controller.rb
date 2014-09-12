@@ -1,38 +1,36 @@
 class DevController < ApplicationController
-  before_filter :must_be_in_development!
+  before_filter :do_not_execute_in_production!
   before_filter :set_seo_vars
 
-  if Rails.env.development? || Rails.env.test? || Rails.env.staging?
-    def impersonate
-      redirect_to "/"
-    end
+  def impersonate
+    redirect_to "/"
+  end
 
-    def locales
-    end
+  def locales
+  end
 
-    def access_denied
-      raise CanCan::AccessDenied
-    end
+  def access_denied
+    raise CanCan::AccessDenied
+  end
 
-    def flash_messages
-      flash[:alert]        = "I am a `alert` flash message"
-      flash[:error]        = "I am a `error` flash message"
-      flash[:notice]       = "I am a `notice` flash message"
-      flash[:non_existent] = "I am a `not_existant` flash message"
-    end
+  def flash_messages
+    flash[:alert]        = "I am a `alert` flash message"
+    flash[:error]        = "I am a `error` flash message"
+    flash[:notice]       = "I am a `notice` flash message"
+    flash[:non_existent] = "I am a `not_existant` flash message"
+  end
 
-    def bootstrap_data
-      @bootstrap_example_from_backend = {
-        title:   'BootstrapData is working! :D',
-        content: "This text is generated from the backend, serialized into json in the render, and recovered and showed by javascript"
-      }
-    end
+  def bootstrap_data
+    @bootstrap_example_from_backend = {
+      title:   'BootstrapData is working! :D',
+      content: "This text is generated from the backend, serialized into json in the render, and recovered and showed by javascript"
+    }
   end
 
   private
 
-  def must_be_in_development!
-    raise ActiveRecord::RecordNotFound unless Rails.env.development? || Rails.env.test?
+  def do_not_execute_in_production!
+    raise ActiveRecord::RecordNotFound if Rails.env.production?
   end
 
   def set_seo_vars(node=nil)
