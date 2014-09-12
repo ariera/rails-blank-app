@@ -6,6 +6,5 @@ Feature: Bootstrap Data Feature
 
   @javascript
   Scenario: The frontpage uses bootstrap data
-    Given I visit the front page
+    Given I visit the bootstrap data test page
     Then I see a text that reads "BootstrapData is working!"
-
