@@ -59,6 +59,13 @@
             Try it
           %code flash[:messages]
           are autmatically handeled by the layout
+        %li
+          = link_to page_path(:demo), class:'btn btn-xs btn-default' do
+            Try it
+          %code StaticController
+          manages static pages, easily routable thanks to
+          %code page_path(:name)
+          helper
 
   %hr
   %footer
