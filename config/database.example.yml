@@ -4,8 +4,6 @@ default: &default
   encoding: utf8
   reconnect: false
   pool: 5
-  username: postgres
-  password: qwerty
   username: postgresql_user
   password:
 
@@ -15,7 +13,7 @@ development:
 
 test: &test
   <<: *default
-  database: app_development
+  database: app_test
 
 cucumber:
   <<: *test
