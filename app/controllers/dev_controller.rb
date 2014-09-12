@@ -1,5 +1,4 @@
 class DevController < ApplicationController
-  layout "public"
   before_filter :must_be_in_development!
   before_filter :set_seo_vars
 
