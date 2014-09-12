@@ -1,3 +1,4 @@
+require 'ostruct'
 class DevController < ApplicationController
   before_filter :do_not_execute_in_production!
   before_filter :set_seo_vars
@@ -25,6 +26,12 @@ class DevController < ApplicationController
       title:   'BootstrapData is working! :D',
       content: "This text is generated from the backend, serialized into json in the render, and recovered and showed by javascript"
     }
+  end
+
+  def send_test_mail
+    user = OpenStruct.new(email: 'iamuser@railsblank.app')
+    TestMailer.test(user).deliver
+    redirect_to :back
   end
 
   private

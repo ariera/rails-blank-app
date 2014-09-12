@@ -66,6 +66,10 @@
           manages static pages, easily routable thanks to
           %code page_path(:name)
           helper
+        %li
+          = link_to url_for(controller:"dev", action:"mails"), class:'btn btn-xs btn-default' do
+            Try it
+          Mailing in this app is already in place
 
   %hr
   %footer
