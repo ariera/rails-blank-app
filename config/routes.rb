@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  root 'home#index'
 
   devise_for :users, :controllers => {
     :confirmations => "users/confirmations",
@@ -9,6 +8,8 @@ Rails.application.routes.draw do
     :unlocks       => "users/unlocks",
   }
 
+  root 'static#landing'
+  match "/page/:action" => "static#:action", :via => :all, :as => 'page'
   match "/dev/:action" => "dev#:action", :via => :all, :as => 'dev'
 
 end
