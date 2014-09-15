@@ -38,14 +38,14 @@ module LayoutsHelper
   end
 
   def title
-    "<title>#{ content_for(:title) }</title>".html_safe
+    "<title>#{seo_vars[:title]}</title>".html_safe
   end
 
   def meta_tags(allow_index=true)
     meta =  "<meta http-equiv='Content-type' content='text/html; charset=utf-8' /> \n"
     meta << "<meta name='robots' content='noindex,noarchive,nofollow' /> \n" unless allow_index
-    #meta << "<meta name=\"Description\" content=\"#{seo_vars[:meta_desc]}\" /> \n"
-    #meta << "<meta http-equiv='Content-Language' content='#{seo_vars[:meta_lang]}' /> \n"
+    meta << "<meta name=\"Description\" content=\"#{seo_vars[:meta_desc]}\" /> \n"
+    meta << "<meta http-equiv='Content-Language' content='#{seo_vars[:meta_lang]}' /> \n"
     meta << '<meta http-equiv="X-UA-Compatible" content="IE=edge">'
     meta << '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">'
 

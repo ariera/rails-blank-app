@@ -1,5 +1,5 @@
 # Rails blank app
-An already working application with the latest libraries that we love already in place
+An already working application with the latest libraries, and our own conventions, that we love already in place
 
 ## List of awesome things this App does:
 
@@ -17,7 +17,15 @@ An already working application with the latest libraries that we love already in
 * it uses `cucumber` for integration and behaviour testing with support for poltergeist
 * it has an error messages helper
 * IE9 conditional stylesheet + css splitter to avoid the > 4096 selectors issue for that browser
-
+* seo_vars, look how they are used in `DevController`
+* return_here_url helper
+* basic cancacan config
+* rescue CanCan::AccessDenied
+* follow_return_to_or helper
+* authenticate_user_and_return_to helper
+* render_404 y ActiveRecord::RecordNotFound helper
+* helper to display an object errors `errors_list`
+* helper for flash messages
 
 ## TODO
 * document the application
@@ -28,19 +36,8 @@ An already working application with the latest libraries that we love already in
 * explain database, secrets examples
 * document the application the awesome things this App does
 * list the libraries supported
-* open new branch for `devise`
-* add default url config and email smtp settings
 * document how to install poltergeist
 * explain database, secrets examples
-* helper for flash messages
-* basic cancacan config
-* rescue CanCan::AccessDenied
-* follow_return_to_or helper
-* return_here_url helper
-* seo_vars helper
-* authenticate_user_and_return_to helper
-* render_404 y ActiveRecord::RecordNotFound helper
-* consider adding high_voltage for static pages management
 
 # Devise
 Add a proper mail sender to devise.rb, Ex:

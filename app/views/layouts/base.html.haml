@@ -12,6 +12,7 @@
       = yield(:layout_specific)
     - else
       %main
+        = render 'shared/flashes'
         = yield
 
     = render partial:"shared/global_footer"

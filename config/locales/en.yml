@@ -21,7 +21,10 @@
 
 en:
   hello: "Hello world!"
+  seo_default_title: "Rails Blank App"
+  seo_default_desc: "An already working application with the latest libraries that we love, and our own conventions, already in place"
   dev:
+    locales_seo_title: 'I18n & Locales in Rails Blank App'
     locales_intro: "A page to check the locales status of the web site"
     locales_subintro_html: "The logic is managed by <kbd>LocaleAware</kbd> controller concern. It is being tested using this page that <strong> won't </strong> appear in production. Please don't remove this :)"
     locales_current_locale: "Current Locale"
