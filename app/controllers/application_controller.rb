@@ -78,4 +78,27 @@ class ApplicationController < ActionController::Base
     return if current_user
     # redirect_to new_user_session_path(:return_to_url=>request.fullpath)
   end
+
+  def https_redirect(use_https)
+    unless Rails.env.test?
+      if request.ssl? && !use_https || !request.ssl? && use_https
+        protocol = request.ssl? ? "http" : "https"
+        # if you need to specify http/https ports other than the default 80/443
+        #port = request.ssl? ? CONFIG[:http_port] : CONFIG[:https_port]
+        flash.keep
+        redirect_to protocol: "#{protocol}://",  port:port, status: :moved_permanently, params:request.query_parameters
+        # if you need to specify http/https ports other than the default 80/443
+        # redirect_to protocol: "#{protocol}://",  port:port, status: :moved_permanently, params:request.query_parameters
+      end
+    end
+  end
+
+  def force_https
+    https_redirect(true)
+  end
+
+  def force_http
+    https_redirect(false)
+  end
+
 end
