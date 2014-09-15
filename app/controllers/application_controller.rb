@@ -72,7 +72,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user_and_return_to!
     return if current_user
-    # redirect_to new_user_session_path(:return_to_url=>request.fullpath)
+    redirect_to new_user_session_path(:return_to_url=>request.fullpath)
   end
 
   def https_redirect(use_https)
