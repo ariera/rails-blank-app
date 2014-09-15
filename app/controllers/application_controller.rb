@@ -73,4 +73,9 @@ class ApplicationController < ActionController::Base
       block.call
     end
   end
+
+  def authenticate_user_and_return_to!
+    return if current_user
+    # redirect_to new_user_session_path(:return_to_url=>request.fullpath)
+  end
 end
