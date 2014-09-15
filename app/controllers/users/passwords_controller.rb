@@ -1,9 +1,3 @@
 class Users::PasswordsController < Devise::PasswordsController
-  # def new
-  #   super
-  # end
-
-  # def create
-  #   super
-  # end
+  # before_filter :force_https
 end

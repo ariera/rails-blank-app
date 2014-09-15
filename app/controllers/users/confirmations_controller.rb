@@ -1,9 +1,9 @@
 class Users::ConfirmationsController < Devise::ConfirmationsController
-  # def new
-  #   super
+  # before_filter :force_https
+
+  private
+
+  # def set_flash_message(*args, &block)
   # end
 
-  # def create
-  #   super
-  # end
 end
