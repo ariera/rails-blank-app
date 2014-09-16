@@ -17,8 +17,6 @@ gem 'css_splitter'
 gem "browser"
 
 gem 'cancancan'
-gem 'resque', :require => 'resque/server'
-gem 'resque-scheduler'
 gem "stamp", "~> 0.4.0"
 gem 'stamp-i18n'
 gem 'rails-i18n'
