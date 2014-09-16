@@ -23,7 +23,26 @@
     by default. You will find more documentation on how to install and run it in the
     %code README
     file.
-
+  %hr
+  %h2 AsyncDelivery
+  %p
+    It is our solution to easily deliver emails in background, powered by
+    %code resque
+  %p
+    There is a module inside the
+    %code mailers
+    folder that can be included in any mailer. It will grant a new method to any mailer class called
+    %code async_deliver
+  %p
+    Example of use
+    %pre
+      \#You would normally write this
+      TestMailer.test(user).deliver
+      \# Now you can write this
+      TestMailer.async_deliver(:test, user)
+  %p
+    Sometimes in development or testing it is convenient to be able to make any asynchronous call completely sync.
+    For that there is a button in the Developer Toolbar that allows you to switch it and force everything to be synchronous.
   %hr
   %h2 Testing in RSpec
   %p
@@ -35,6 +54,10 @@
   %h2 Try it yourself
   %p
     = link_to "click here to send a test mail", url_for(controller:'dev', action:'send_test_mail'), class:'btn btn-default'
+  %p
+    Remember to make
+    %code Async:[OFF]
+    in the Developer Toolbar
   %p
     Remembed that you need to have
     %code mailcatcher

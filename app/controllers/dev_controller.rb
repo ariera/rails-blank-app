@@ -30,7 +30,7 @@ class DevController < ApplicationController
 
   def send_test_mail
     user = OpenStruct.new(email: 'iamuser@railsblank.app')
-    TestMailer.test(user).deliver
+    TestMailer.async_deliver(:testing, user)
     redirect_to :back
   end
 

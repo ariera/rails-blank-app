@@ -2,6 +2,15 @@
   = form_tag({:controller => "/dev", :action=>"impersonate"}, :class=>"form-inline", rel:"auto-submit") do
     -#- if false Rails.env.development?
     -#  = link_to "tests", jasmine_rails_path, class:"btn"
+
+    - if params[:async]
+      - $async = params[:async]=="on"
+      :coffee
+        window.location = window.location.href.replace(/\?async=off|&async=off|\?async=on|&async=on/, "")
+    - if $async
+      = link_to "Async:[ON]".html_safe, url_for(params.merge(async:"off")), class:"btn btn-xs"
+    - else
+      = link_to "Async:[OFF]".html_safe, url_for(params.merge(async:"on")), class:"btn btn-xs"
     = link_to "routes", "/rails/info/routes", class:"btn"
     = link_to "mailcatcher", "http://127.0.0.1:1080", class:"btn"
     = link_to (I18n.available_locales - [I18n.locale]).first, url_for(request.query_parameters.merge(_locale: (I18n.available_locales - [I18n.locale]).first)), class:"btn"

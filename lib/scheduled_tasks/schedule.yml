@@ -1,0 +1,5 @@
+dummy:
+  cron: "0 4 * * *"
+  queue: dummy
+  class: DummyScheduler
+  description: 'This is just a dummy example'

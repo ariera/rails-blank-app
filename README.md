@@ -38,6 +38,11 @@ An already working application with the latest libraries, and our own convention
 ## SETING UP THE APP
 What you need to know about how to install and get this app running.
 
+### Background Jobs
+Managed by `resque`. To run them in development run:
+
+    RAILS_ENV=development QUEUE=* bundle exec rake resque:work
+
 ### EMAILS
 We're using MailCatcher [http://mailcatcher.me/]
 
