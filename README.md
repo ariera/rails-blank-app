@@ -38,6 +38,7 @@ An already working application with the latest libraries, and our own convention
 * list the libraries supported
 * document how to install poltergeist
 * explain database, secrets examples
+* bin/tests
 
 # Devise
 Add a proper mail sender to devise.rb, Ex:
