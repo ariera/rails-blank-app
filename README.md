@@ -38,6 +38,10 @@ An already working application with the latest libraries, and our own convention
 ## SETING UP THE APP
 What you need to know about how to install and get this app running.
 
+
+### Launch Redis
+`redis-server config/redis.conf`
+
 ### Background Jobs
 Managed by `resque`. To run them in development run:
 
