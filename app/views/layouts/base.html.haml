@@ -4,7 +4,6 @@
 
   %body{class:body_css_classes}
     = bootstrap_data
-    = dev_tools
 
     = render partial:"shared/global_header"
 
@@ -16,5 +15,7 @@
         = yield
 
     = render partial:"shared/global_footer"
+
+    = dev_tools
 
     = render 'shared/javascript'
