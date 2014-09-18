@@ -18,8 +18,6 @@ gem "browser"
 
 gem 'devise', '~> 3.3.0'
 gem 'cancancan'
-gem 'resque', :require => 'resque/server'
-gem 'resque-scheduler'
 gem "stamp", "~> 0.4.0"
 gem 'stamp-i18n'
 gem 'rails-i18n'
