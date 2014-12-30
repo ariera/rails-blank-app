@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   include LocaleAware
   before_filter :set_locale
-  before_filter :set_user_locale_if_unset
+  before_filter :save_selected_locale_in_current_user
 
   def current_user
     User.first

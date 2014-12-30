@@ -61,8 +61,8 @@ module LocaleAware
     current_user.try(:locale)
   end
 
-  def set_user_locale_if_unset
-    if current_user && !user_locale
+  def save_selected_locale_in_current_user
+    if current_user #&& !user_locale
       current_user.update_attribute(:locale, I18n.locale)
     end
   end
