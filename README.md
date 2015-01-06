@@ -33,7 +33,11 @@ An already working application with the latest libraries, and our own convention
 * list the libraries supported
 * document how to install poltergeist
 * explain database, secrets examples
-* consider adding high_voltage for static pages management
+* add dont-env for prod and development
+* add staging environment (also for email config)
+* add attachment example: carrierwave vs refile
+* add simple_form
+* switch to slim
 
 ## SETING UP THE APP
 What you need to know about how to install and get this app running.
